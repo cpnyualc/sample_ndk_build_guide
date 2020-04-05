@@ -1,4 +1,4 @@
-#include <fun.h>
+#include "wapperfun.h"
 #include <string.h>
 
 void wfun1(char* str) {

@@ -9,7 +9,7 @@ LOCAL_PATH := $(call my-dir)#设置当前目录,当前目录其实是jni
 #include $(PREBUILT_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)#清空除LOCAL_PATH之外的所有LOCAL_XX变量的值
-LOCAL_MODULE := project2#工程名字，编译出来的目标名字
+LOCAL_MODULE := demo3#工程名字，编译出来的目标名字
 LOCAL_PATH := $(LOCAL_PATH)/..#调整目录
 #设置一些自己的变量
 PORJECT_INC_PATH := $(LOCAL_PATH)
@@ -32,7 +32,7 @@ LOCAL_ARM_MODE := arm #arm mode
 LOCAL_C_INCLUDES := $(PORJECT_INC_PATH)/inc/
 #加入第三方（自己的so）
 LOCAL_C_INCLUDES += $(PORJECT_INC_PATH)/pro_libs/
-LOCAL_LDFLAGS := $(LOCAL_PATH)/pro_libs/libproject1.so
+LOCAL_LDFLAGS := $(LOCAL_PATH)/pro_libs/libproject2.so
 #加入第三方（自己的.a）
 #LOCAL_STATIC_LIBRARIES += module1
 
@@ -52,8 +52,8 @@ $(warning $(LOCAL_SRC_FILES)) #打印信息
 #LOCAL_CXXFLAGS := -std=c++11
 
 #链接系统库
-LOCAL_LDLIBS := -llog -lm
+#LOCAL_LDLIBS := -llog -lm
 
-#include $(BUILD_EXECUTABLE) #编译成一个可执行文件
-include $(BUILD_SHARED_LIBRARY) #编译成.so文件
+include $(BUILD_EXECUTABLE) #编译成一个可执行文件
+#include $(BUILD_SHARED_LIBRARY) #编译成.so文件
 #include $(BUILD_STATIC_LIBRARY) #编译成.a文件

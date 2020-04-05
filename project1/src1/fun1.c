@@ -2,5 +2,5 @@
 #include <string.h>
 
 void fun1(char* str) {
-  strcpy(str, "fun1.");
+  strcpy(str, "Fun1.");
 }

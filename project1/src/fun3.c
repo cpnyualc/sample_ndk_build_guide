@@ -1,4 +1,4 @@
-#include <fun3.h>
+#include "fun.h"
 #include <math.h>
 #include <string.h>
 void fun3(char* str) {

@@ -1,4 +1,4 @@
-#include "fun2.h"
+#include "fun.h"
 
 #include <string>
 using namespace std;
